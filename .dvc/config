@@ -1,0 +1,4 @@
+[core]
+    remote = shared_storage
+['remote "shared_storage"']
+    url = /Users/iman/Desktop/remote_storage
