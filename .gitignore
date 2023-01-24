@@ -1,1 +1,4 @@
 exp_tracking_env/
+/models
+/model.pkl
+/metrics.json

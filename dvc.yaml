@@ -1,0 +1,21 @@
+stages:
+  prepare:
+    cmd: python src/features/create_features.py
+    deps:
+    - data/raw/iris.data
+    - src/features/create_features.py
+    outs:
+    - data/processed/features.csv
+  train:
+    cmd: python src/model/train.py
+    deps:
+    - data/processed/features.csv
+    - model/train.py
+    params:
+    - learning_rate
+    - max_depth
+    - n_estimators
+    outs:
+    - model.pkl
+    metrics:
+    - metrics.json
